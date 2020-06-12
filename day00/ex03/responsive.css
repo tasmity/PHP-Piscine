@@ -1,0 +1,65 @@
+body {
+    background-color: #505050;
+}
+td.t1 {
+    text-align: center;
+    background-color: palegreen;
+}
+td.t2 {
+    text-align: center;
+    background-color: tomato;
+}
+td.t3 {
+    text-align: center;
+    background-color: lightsalmon;
+}
+td.t4 {
+    text-align: center;
+    background-color: skyblue;
+}
+td.t5 {
+    text-align: center;
+    background-color: mediumturquoise;
+}
+td.t6 {
+    text-align: center;
+    background-color: lightsteelblue;
+}
+td.t7 {
+    text-align: center;
+    background-color: cornflowerblue;
+}
+td.t8 {
+    text-align: center;
+    background-color: mediumseagreen;
+}
+td.t9 {
+    text-align: center;
+    background-color: gold;
+}
+td.t10 {
+    text-align: center;
+    background-color: darksalmon;
+}
+p.av {
+    text-align: right;
+    font-weight: normal;
+    font-size: 0.8vw;
+    margin: 2px 2px 5px 2px;
+}
+p.num {
+    text-align: left;
+    font-weight: normal;
+    font-size: 0.8vw;
+    margin: 5px 2px 2px 2px;
+}
+table.mend{
+    position: center;
+    width: 99%;
+    border: #505050;
+}
+h2{
+    text-align:center;
+    margin:10px;
+    font-size: 1.5vw;
+}
