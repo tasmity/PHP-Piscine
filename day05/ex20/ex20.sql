@@ -1,6 +1,6 @@
 SELECT film.id_genre AS 'id_genre',
        genre.name AS 'name_genre',
-       distrib.id_distrib AS 'id_distrib',
+       film.id_distrib AS 'id_distrib',
        distrib.name AS 'name_distrib',
        title AS 'title_film'
 FROM film
