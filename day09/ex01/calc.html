@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc</title>
+    <style>
+        div.calc
+        {
+            padding: 5%;
+            margin: 5% 30% 30% 30%;
+            background-color: papayawhip;
+        }
+        div.ot
+        {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+    <script>
+        var a;
+        var b;
+        var sign;
+        var calc;
+
+        window.onload = function () {
+            setInterval("alert('Please, use me..')", 30000)
+            a = document.getElementById("a");
+            b = document.getElementById("b");
+            sign = document.getElementById("sign");
+            calc = document.getElementById("calc");
+            calc.addEventListener("submit", res);
+        };
+
+
+        function res() {
+            event.preventDefault();
+            var a1 = Number(a.value);
+            var b2 = Number(b.value);
+            if (!isint(a1) || !isint(b2))
+            {
+                alert("Error :(");
+                return ;
+            }
+            if (!notnull(a1, b2))
+            {
+                alert("Error :(");
+                return ;
+            }
+            switch (sign.value) {
+                case ("+"):
+                    view(a1 + b2);
+                    break;
+                case ("-"):
+                    view(a1 - b2);
+                    break;
+                case ("*"):
+                    view(a1 * b2);
+                    break;
+                case ("/"):
+                    if (b2 == 0)
+                        view("It’s over 9000!");
+                    else
+                        view(a1 / b2);
+                    break;
+                case ("%"):
+                    if (b2 == 0)
+                        view("It’s over 9000!");
+                    else
+                        view(a1 % b2);
+                    break;
+                default:
+                    view("Error :(");
+            }
+        }
+
+        function isint(value) {
+            return (!isNaN(value) && parseInt(Number(value)) == value &&
+                !isNaN(parseInt(value, 10)));
+        }
+        function notnull(a1, b2) {
+            if (a1 < 0 || b2 < 0)
+                return false;
+            return true;
+        }
+
+        function view(value) {
+            console.log(value);
+            alert(value);
+        }
+    </script>
+</head>
+<body>
+    <div class="ot">
+        <div class="calc">
+            <h1>Калькулятор</h1>
+            <form action="" id="calc">
+                <input type="text" id="a" value="">
+                <select id="sign">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <input type="text" id="b" value="">
+                <input type="submit" value="Try me!">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
